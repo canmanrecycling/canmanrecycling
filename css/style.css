@@ -290,4 +290,14 @@
     .navbar-collapse.show + .container-fluid {
         margin-top: 200px; /* Adjust this value as needed */
     }
+    .navbar-toggler {
+        position: relative;
+        z-index: 10000; /* Ensures the toggle button stays on top */
+    }
+}
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
 }
