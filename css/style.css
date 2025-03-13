@@ -1,0 +1,275 @@
+/********** Template CSS **********/
+:root {
+    --primary: #004b20; /* Changed to Kelly Green */
+    --secondary: #004b20;
+    --light: #F2F2F2;
+    --dark: #004b20;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #004b20; /* Kelly Green */
+    border-color: #004b20;
+}
+.btn-primary:hover {
+    background-color: #004b20; /* Darker shade of Kelly Green on hover */
+    border-color: #004b20;
+}
+.btn-sec {
+    background-color: #efca23; /* Kelly Green */
+    border-color: #efca23;
+}
+.btn-sec:hover {
+    background-color: #efca23; /* Darker shade of Kelly Green on hover */
+    border-color: #efca23;
+}
+
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 2px;
+}
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #efca23 !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/*** Navbar Hover Effects ***/
+.navbar-nav .nav-link:hover {
+    color: #efca23 !important; /* Kelly Green on hover */
+}
+
+/*** Adjust the navbar-brand width ***/
+.navbar-brand {
+    width: 350px; /* Increase the width of the column */
+}
+
+/*** Increase the font size of the text ***/
+.navbar-brand h2 {
+    font-size: 2.5rem; /* Adjust the font size of 'Can Man' */
+}
+
+/*** Increase the size of the logo ***/
+.navbar-brand img {
+    height: auto;
+    max-height: 60px;  /* Max height to keep the logo from growing too large */
+    width: auto;
+    margin-right: 15px;
+}
+
+/* Change active service tab color to Kelly Green */
+.nav-pills .nav-link.active {
+    background-color: #efca23 !important;
+    color: white !important;
+}
+
+/* Testimonial active state */
+.testimonial-item {
+    transition: 0.3s ease-in-out;
+}
+
+.testimonial-item.active {
+    border: 2px solid #efca23 !important;
+}
+
+.testimonial-item.active h5 {
+    color: #efca23 !important;
+}
+
+.testimonial-item.active .testimonial-text {
+    background-color: #efca23 !important;
+    color: white !important;
+}
+
+/* Change Owl Carousel dots to Kelly Green */
+.owl-dots .owl-dot.active span {
+    background: #efca23 !important;
+}
+.owl-dots .owl-dot span {
+    background: rgba(0, 75, 32, 1) !important;
+}
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+/* Ensure image in the carousel remains centered */
+.carousel-item .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stroke {
+    color: #16982b;
+  background-color: white;
+  text-shadow: -1px -1px 0 #004b20, 1px -1px 0 #004b20, -1px 1px 0 #004b20, 1px 1px 0 #004b20;
+  }
+  .footer img {
+    height: 180px; /* Adjust the height as needed */
+    width: auto; /* Keep the aspect ratio intact */
+    object-fit: contain; /* Ensures the image doesn't stretch and maintains its aspect ratio */
+  }
