@@ -304,3 +304,24 @@
         padding-bottom: 50px;
     }
 }
+/* By default, show the phone number as text */
+.phone-text {
+    display: block;
+}
+
+/* Show the clickable "tel" link on mobile and hide text on mobile */
+@media (max-width: 767px) {
+    .phone-link {
+        display: block;
+    }
+    .phone-text {
+        display: none;
+    }
+}
+
+/* Hide the clickable "tel" link on larger screens (desktop) */
+@media (min-width: 768px) {
+    .phone-link {
+        display: none;
+    }
+}
