@@ -116,8 +116,15 @@
                         <div class="col-md-4">
                             <div class="bg-light d-flex flex-column justify-content-center p-4">
                                 <h5 class="text-uppercase" style="color: #004b20;">Phone:</h5>
-                                <p class="m-0" style="color: #004b20;"><i class="fa fa-mobile me-2" style="color: #004b20;"></i>609-272-CANS (609-272-2267)
-                                </p>
+                                <!-- Phone number displayed as text on desktop -->
+                            <p class="m-0 phone-text" style="color: #004b20;">
+                                <i class="fa fa-mobile me-2" style="color: #004b20;"></i>609-272-CANS (609-272-2267)
+                            </p>
+                            <!-- Phone number as clickable tel link on mobile -->
+                            <p class="m-0 phone-link d-none d-md-block" style="color: #004b20;">
+                                <i class="fa fa-mobile me-2" style="color: #004b20;"></i>
+                                <a href="tel:+16092722267" style="color: #004b20;">609-272-CANS (609-272-2267)</a>
+                            </p>
                             </div>
                         </div>
                         <div class="col-md-4">
